@@ -32,13 +32,13 @@ Install dependencies
   npm install
 ```
 
-Start the tests
+Start tests
 
 ```bash
   npm test
 ```
 
-Start the server
+Start server
 
 ```bash
   npm run dev
