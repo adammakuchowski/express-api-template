@@ -20,25 +20,25 @@ The repository is a template that provides a ready-to-use structure and configur
 
 ## Run Locally
 
-Clone the project
+Clone Project
 
 ```bash
   git clone https://github.com/adammakuchowski/express-api-template
 ```
 
-Install dependencies
+Install Dependencies
 
 ```bash
   npm install
 ```
 
-Start tests
+Start Tests
 
 ```bash
   npm test
 ```
 
-Start server
+Start Server
 
 ```bash
   npm run dev
