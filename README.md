@@ -11,7 +11,6 @@ The repository is a template that provides a ready-to-use structure and configur
 - [cors](https://www.npmjs.com/package/cors): A middleware for handling Cross-Origin Resource Sharing (CORS).
 - [dotenv](https://www.npmjs.com/package/dotenv): A module that loads environment variables from a `.env` file into `process.env`.
 - [helmet](https://helmetjs.github.io/): A middleware to enhance the security of Express applications by setting various HTTP headers.
-- [joi](https://joi.dev/): A library for data validation.
 - [mongoose](https://mongoosejs.com/): A MongoDB object modeling tool designed to work in an asynchronous environment.
 - [morgan](https://www.npmjs.com/package/morgan): A HTTP request logger middleware for Node.js.
 - [supertest](https://www.npmjs.com/package/supertest): A library for testing Node.js HTTP servers, often used with testing frameworks like Jest.
