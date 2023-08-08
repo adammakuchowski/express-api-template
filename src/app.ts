@@ -6,6 +6,7 @@ import errorHandler from './middlewares/errorHandler'
 import sampleRouter from './api/routes/sampleRouter'
 import {connectDB} from './db/db'
 import corsOptions from './corsConfig'
+import notFound from './middlewares/notFoundHandler'
 
 const app = express()
 connectDB()
@@ -21,6 +22,7 @@ app.get('/', (req: Request, res: Response): void => {
 
 app.use('/sampleRouter', sampleRouter)
 
+app.use(notFound)
 app.use(errorHandler)
 
 export default app
