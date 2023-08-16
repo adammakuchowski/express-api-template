@@ -4,7 +4,7 @@ import helmet from 'helmet'
 import cors from 'cors'
 import errorHandler from './middlewares/errorHandler'
 import sampleRouter from './api/routes/sampleRouter'
-import corsOptions from './corsConfig'
+import corsOptions from './configs/corsConfig'
 import notFound from './middlewares/notFoundHandler'
 
 const setupMiddlewares = (app: Application) => {

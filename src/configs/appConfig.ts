@@ -15,7 +15,7 @@ interface AppConfig {
   database: DatabaseConfig;
 }
 
-const config: AppConfig = {
+const appConfig: AppConfig = {
   port: process.env.PORT ? Number(process.env.PORT) : 3000,
   database: {
     host: process.env.DB_HOST || '127.0.0.1',
@@ -26,4 +26,4 @@ const config: AppConfig = {
   }
 }
 
-export default config
+export default appConfig

@@ -1,10 +1,10 @@
 import createApp from './app'
-import config from './config'
+import appConfig from './configs/appConfig'
 import {connectDB} from './db/db'
 
 const startApp = async () => {
   try {
-    const {port} = config 
+    const {port} = appConfig 
     
     await connectDB()
     const express = createApp()
