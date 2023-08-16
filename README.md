@@ -16,6 +16,7 @@ The repository is a template that provides a ready-to-use structure and configur
 - [supertest](https://www.npmjs.com/package/supertest): A library for testing Node.js HTTP servers, often used with testing frameworks like Jest.
 - [jest](https://jestjs.io/): A popular testing framework for JavaScript and TypeScript projects.
 - [ts-jest](https://www.npmjs.com/package/ts-jest): A preprocessor with TypeScript support for Jest testing framework.
+- [winston](https://www.npmjs.com/package/winston): A Node.js logging library with flexible transports and customization.
 
 ## Run Locally
 
