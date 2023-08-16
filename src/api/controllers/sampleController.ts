@@ -1,5 +1,6 @@
 import {Request, Response} from 'express'
 import {createNewSampleData, getAllSampleData} from '../services/sampleService'
+import {logger} from '../../app'
 
 export const getSampleData = (
   req: Request,
@@ -11,7 +12,7 @@ export const getSampleData = (
     res.status(200)
     res.json(data)
   } catch (error: any) {
-    console.error('[getSampleData] error:', error.message)
+    logger.error('[getSampleData] error:', error.message)
   }
 }
 
@@ -26,8 +27,8 @@ export const createSampleData = async (
 
     res.status(201)
     res.json(newSampleData)
-    console.info('[createSampleData] created')
+    logger.info('[createSampleData] created')
   } catch (error: any) {
-    console.error('[createSampleData] error:', error.message)
+    logger.error('[createSampleData] error:', error.message)
   }
 }
