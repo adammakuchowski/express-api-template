@@ -12,7 +12,7 @@ export const getSampleData = (
     res.status(200)
     res.json(data)
   } catch (error: any) {
-    logger.error('[getSampleData] error:', error.message)
+    logger.error(`[getSampleData] error: ${error.message}`)
   }
 }
 
@@ -29,6 +29,6 @@ export const createSampleData = async (
     res.json(newSampleData)
     logger.info('[createSampleData] created')
   } catch (error: any) {
-    logger.error('[createSampleData] error:', error.message)
+    logger.error(`[createSampleData] error: ${error.message}`)
   }
 }
