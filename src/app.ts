@@ -6,6 +6,8 @@ import morgan from 'morgan'
 import helmet from 'helmet'
 import cors from 'cors'
 import winston from 'winston'
+
+import appConfig from './configs/appConfig'
 import corsOptions from './configs/corsConfig'
 import loggerConfig from './configs/winstonConfig'
 import sampleRouter from './api/routes/sampleRouter'
@@ -13,6 +15,7 @@ import errorHandler from './middlewares/errorHandler'
 import notFound from './middlewares/notFoundHandler'
 import {connectDB} from './db/db'
 
+const {port} = appConfig
 export const logger = winston.createLogger(loggerConfig)
 
 connectDB()
@@ -32,4 +35,6 @@ app.use('/sampleRouter', sampleRouter)
 app.use(notFound)
 app.use(errorHandler)
 
-export default app
+app.listen(port, () => {
+  logger.info(`API is listening on port: ${port}`)
+})

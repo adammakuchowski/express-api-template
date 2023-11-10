@@ -1,4 +1,5 @@
 import mongoose from 'mongoose'
+
 import {SampleData} from '../../interfaces/types'
 
 const sampleDataSchema = new mongoose.Schema<SampleData>({
