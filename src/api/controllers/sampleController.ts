@@ -1,17 +1,18 @@
 import {
   NextFunction,
   Request,
-  Response,
+  Response
 } from 'express'
 
 import {createNewSampleData, getAllSampleData} from '../services/sampleService'
+import {SampleData} from '../../interfaces/types'
 import {logger} from '../../app'
 
-export const getSampleData = (
+export const getSampleData = async (
   req: Request,
   res: Response,
-  next: NextFunction,
-): void => {
+  next: NextFunction
+): Promise<void> => {
   try {
     const data = getAllSampleData()
 
@@ -28,9 +29,9 @@ export const getSampleData = (
 export const createSampleData = async (
   req: Request,
   res: Response,
-  next: NextFunction,
+  next: NextFunction
 ): Promise<void> => {
-  const sampleData = req.body
+  const sampleData: SampleData = req.body
 
   try {
     const newSampleData = await createNewSampleData(sampleData)

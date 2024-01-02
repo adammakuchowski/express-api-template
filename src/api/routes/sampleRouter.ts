@@ -1,20 +1,21 @@
 import express from 'express'
+import withAsyncHandler from 'express-async-handler'
 
 import {
   createSampleData,
-  getSampleData,
+  getSampleData
 } from '../controllers/sampleController'
 
 const router = express.Router()
 
 router.get(
   '/getSampleData',
-  getSampleData,
+  withAsyncHandler(getSampleData)
 )
 
 router.post(
   '/createSampleData',
-  createSampleData,
+  withAsyncHandler(createSampleData)
 )
 
 export default router
